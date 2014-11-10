@@ -7,7 +7,7 @@ remote_file install['download_path'] do
   not_if { ::File.exists?(bin_file) }
 end
 
-bash 'extract_module' do
+bash 'extract remote_syslog2' do
   cwd '/tmp'
   code <<-EOH
     mkdir -p #{install['extracted_path']}

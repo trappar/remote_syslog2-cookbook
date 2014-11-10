@@ -2,62 +2,52 @@ remote_syslog2 cookbook
 =======================
 Installs and configures [remote_syslog2](https://github.com/papertrail/remote_syslog2)
 
-## Supported Platforms
+Requirements
+------------
+### Platforms
+- Ubuntu (tested using 14.04)
 
-TODO: List your supported platforms.
+Attributes
+----------
+### remote_syslog2 runtime configuration
+The main configuration of remote_syslog2 is done using a hash which mirrors the structure of the remote_syslog2 config yaml file...
 
-## Attributes
+```ruby
+node['remote_syslog2']['config'] = {
+  conf: {
+    files: []
+  },
+  exclude_files: [],
+  exclude_patterns: [],
+  hostname: node['hostname'],
+  destination: {
+    host: 'logs.papertrailapp.com',
+    port: 12345
+  }
+}```
 
-# This is an example of the log_files.xml
-# files:
-#   - /var/log/httpd/access_log
-#   - /var/log/httpd/error_log
-#   - /opt/misc/*.log
-#   - /home/**/*.log
-#   - /var/log/mysqld.log
-#   - /var/run/mysqld/mysqld-slow.log
-# exclude_files:
-#   - old
-#   - 200\d
-# hostname: www42  # override OS hostname
-# exclude_patterns:
-#   - exclude this
-#   - \d+ things
-# destination:
-#   host: logs.papertrailapp.com
-#   port: 12345   # NOTE: change this to YOUR papertrail port!
-#   protocol: tls
-# new_file_check_interval: 10 # Check every 10 seconds
+Since this is rendered directly to YAML, you can theoretically configure any value which is normally configurable. For more information please reference the [remote_syslog2 examples](https://github.com/papertrail/remote_syslog2/tree/master/examples)
 
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['remote_syslog']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
+Note that for the sake of clarity this cookbook saves the config file to /etc/remote_syslog.yml rather than /etc/log_files.yml
 
-## Usage
+Recipes
+-------
+### default
+Include the default recipe in a run list to have remote_syslog2 installed and configured
 
-### remote_syslog::default
+### install
+Installs remote_syslog2
 
-Include `remote_syslog` in your node's `run_list`:
+### configure
+Generates config file for remote_syslog2
 
-```json
-{
-  "run_list": [
-    "recipe[remote_syslog::default]"
-  ]
-}
-```
+### service
+Installs remote_syslog2 as an init.d service and starts/enables it
 
-## License and Authors
+Usage
+-----
+Generally all you have to do to use this cookbook is add the default recipe to your run_list and configure the `node['remote_syslog2']['config']` hash.
 
+License and Authors
+-------------------
 Author:: Jeff Way (<jeff.way@me.com>)

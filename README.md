@@ -24,7 +24,8 @@ node['remote_syslog2']['config'] = {
     host: 'logs.papertrailapp.com',
     port: 12345
   }
-}```
+}
+```
 
 Since this is rendered directly to YAML, you can theoretically configure any value which is normally configurable. For more information please reference the [remote_syslog2 examples](https://github.com/papertrail/remote_syslog2/tree/master/examples)
 

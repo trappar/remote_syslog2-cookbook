@@ -29,7 +29,7 @@ node['remote_syslog2']['config'] = {
 
 Since this is rendered directly to YAML, you can theoretically configure any value which is normally configurable. For more information please reference the [remote_syslog2 examples](https://github.com/papertrail/remote_syslog2/tree/master/examples)
 
-Note that for the sake of clarity this cookbook saves the config file to /etc/remote_syslog.yml rather than /etc/log_files.yml
+**Note that for the sake of clarity this cookbook saves the config file to /etc/remote_syslog.yml rather than /etc/log_files.yml by default**
 
 Recipes
 -------

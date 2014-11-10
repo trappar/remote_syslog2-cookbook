@@ -1,12 +1,33 @@
-# remote_syslog-cookbook
-
-TODO: Enter the cookbook description here.
+remote_syslog2 cookbook
+=======================
+Installs and configures [remote_syslog2](https://github.com/papertrail/remote_syslog2)
 
 ## Supported Platforms
 
 TODO: List your supported platforms.
 
 ## Attributes
+
+# This is an example of the log_files.xml
+# files:
+#   - /var/log/httpd/access_log
+#   - /var/log/httpd/error_log
+#   - /opt/misc/*.log
+#   - /home/**/*.log
+#   - /var/log/mysqld.log
+#   - /var/run/mysqld/mysqld-slow.log
+# exclude_files:
+#   - old
+#   - 200\d
+# hostname: www42  # override OS hostname
+# exclude_patterns:
+#   - exclude this
+#   - \d+ things
+# destination:
+#   host: logs.papertrailapp.com
+#   port: 12345   # NOTE: change this to YOUR papertrail port!
+#   protocol: tls
+# new_file_check_interval: 10 # Check every 10 seconds
 
 <table>
   <tr>

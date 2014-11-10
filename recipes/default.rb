@@ -7,6 +7,6 @@
 # All rights reserved - Do Not Redistribute
 #
 
-include_recipe 'remote_syslog::install'
-include_recipe 'remote_syslog::configure'
-include_recipe 'remote_syslog::service'
+include_recipe 'remote_syslog2::install'
+include_recipe 'remote_syslog2::configure'
+include_recipe 'remote_syslog2::service'

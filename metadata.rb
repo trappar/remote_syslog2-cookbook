@@ -1,8 +1,8 @@
-name             'remote_syslog'
+name             'remote_syslog2'
 maintainer       'Jeff Way'
 maintainer_email 'jeff.way@me.com'
 license          'All rights reserved'
-description      'Installs/Configures remote_syslog'
-long_description 'Installs/Configures remote_syslog'
-version          '0.1.0'
+description      'Installs/Configures remote_syslog2'
+long_description 'Installs/Configures remote_syslog2'
+version          '0.2.0'
 

@@ -1,8 +1,6 @@
 # Overwrite this in your cookbook
 default['remote_syslog2']['config'] = {
-  conf: {
-    files: []
-  },
+  files: [],
   exclude_files: [],
   exclude_patterns: [],
   hostname: node['hostname'],

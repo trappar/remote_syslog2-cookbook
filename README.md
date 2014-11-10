@@ -14,9 +14,7 @@ The main configuration of remote_syslog2 is done using a hash which mirrors the 
 
 ```ruby
 node['remote_syslog2']['config'] = {
-  conf: {
-    files: []
-  },
+  files: [],
   exclude_files: [],
   exclude_patterns: [],
   hostname: node['hostname'],

@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: remote_syslog
+# Cookbook Name:: remote_syslog2
 # Recipe:: default
 #
 # Copyright (C) 2014 Jeff Way

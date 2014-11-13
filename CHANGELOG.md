@@ -2,6 +2,10 @@ remote_syslog2 Cookbook CHANGELOG
 =================================
 This file is used to list changes made in each version of the remote_syslog2 cookbook.
 
+v0.2.2 (2014-11-13)
+-------------------
+- Fixed more places where "remote_syslog" was used rather than "remote_syslog2"
+
 v0.2.1 (2014-11-10)
 -------------------
 - Change name of extract resource to be less generic

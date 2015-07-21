@@ -51,6 +51,7 @@ stop(){
       kill `cat $pid_file`
       RETVAL=$?
       echo
+      [ $RETVAL -eq 0 ] && [ -e "$pid_file" ] && rm -f $pid_file
       return $RETVAL
     else
       echo "$pid_file not found"

@@ -12,6 +12,7 @@ default['remote_syslog2']['config'] = {
 
 # These attributes probably shouldn't be changed unless they specifically need to be
 default['remote_syslog2']['config_file'] = '/etc/remote_syslog2.yml'
+default['remote_syslog2']['extra_options'] = ''
 default['remote_syslog2']['pid_dir'] = '/var/run'
 default['remote_syslog2']['install']['download_file'] = 'https://github.com/papertrail/remote_syslog2/releases/download/v0.13/remote_syslog_linux_386.tar.gz'
 default['remote_syslog2']['install']['download_path'] = '/tmp/remote_syslog.tar.gz'

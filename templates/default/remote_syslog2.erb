@@ -23,7 +23,7 @@ prog="<%= node['remote_syslog2']['install']['bin'] %>"
 config="<%= node['remote_syslog2']['config_file'] %>"
 pid_dir="<%= node['remote_syslog2']['pid_dir'] %>"
 
-EXTRAOPTIONS=""
+EXTRAOPTIONS="<%= node['remote_syslog2']['extra_options'] %>"
 
 pid_file="$pid_dir/$prog.pid"
 

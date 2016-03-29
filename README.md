@@ -27,6 +27,12 @@ node['remote_syslog2']['config'] = {
 
 Since this is rendered directly to YAML, you can theoretically configure any value which is normally configurable. For more information please reference the [remote_syslog2 examples](https://github.com/papertrail/remote_syslog2/tree/master/examples)
 
+Additional remote_syslog2 command line settings can be specfified in the extra_options attribute
+
+```ruby
+node['remote_syslog2']['extra_options'] = '--facility=local6'
+```
+
 **Note that for the sake of clarity this cookbook saves the config file to /etc/remote_syslog2.yml rather than /etc/log_files.yml by default**
 
 Recipes

@@ -2,6 +2,16 @@ remote_syslog2 Cookbook CHANGELOG
 =================================
 This file is used to list changes made in each version of the remote_syslog2 cookbook.
 
+v0.3.0 (2016-05-02)
+-------------------
+- Add remote_syslog2 binary update functionality - see "Note about updates" in readme
+- Update remote_syslog binary version to 0.17 (Andy Thompson)
+- Allow configuration of command line options (Rudolf Vriend)
+- Fix generated config file on Chef 11.14 (Hendy Tanata)
+- Fix invalid config file when non-integer ports are specified
+- Add test for non-integer ports
+- Add chefignore
+
 v0.2.3 (2014-11-13)
 -------------------
 - Fix service management not deleting pid file when stop is called

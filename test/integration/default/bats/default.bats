@@ -7,6 +7,10 @@
     [ -f /etc/remote_syslog2.yml ]
 }
 
+@test "port in config file is unquoted" {
+    cat /etc/remote_syslog2.yml | grep "port: 123"
+}
+
 @test "remote_syslog2 is running" {
     [ -f /var/run/remote_syslog2.pid ]
 }

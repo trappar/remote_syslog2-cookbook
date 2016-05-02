@@ -11,7 +11,7 @@
 }
 
 @test "remote_syslog2 is running" {
-    [ -f /var/run/remote_syslog2.pid ]
+    service remote_syslog2 status | grep "running"
 }
 
 @test "downloaded archive has been cleaned up" {

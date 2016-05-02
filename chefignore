@@ -1,0 +1,31 @@
+# Testing #
+###########
+test/*
+.kitchen*
+
+# SCM #
+#######
+.git
+*/.git
+.gitignore
+.gitmodules
+.gitconfig
+.gitattributes
+
+# Berkshelf #
+#############
+Berksfile
+Berksfile.lock
+cookbooks/*
+tmp
+
+# OTHER #
+#########
+CHANGELOG*
+LICENSE*
+README*
+
+# Vagrant #
+###########
+.vagrant
+Vagrantfile

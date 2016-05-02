@@ -33,7 +33,15 @@ Additional remote_syslog2 command line settings can be specfified in the extra_o
 node['remote_syslog2']['extra_options'] = '--facility=local6'
 ```
 
-**Note that for the sake of clarity this cookbook saves the config file to /etc/remote_syslog2.yml rather than /etc/log_files.yml by default**
+**For the sake of clarity this cookbook saves the config file to /etc/remote_syslog2.yml rather than the normal /etc/log_files.yml by default**
+
+Note about updates
+------------------
+
+As of version 0.3.0 of this cookbook the binary for remote_syslog2 will include the binary's version number after it -
+for example "/usr/local/bin/remote_syslog_0.17". This is because remote_syslog2 has no command line flag to find out a
+binary's version, and this cookbook needs some way of detecting old versions that need to be updated. 
+If you are directly using this binary outside of chef, you will need to make sure you're using the correctly updated binary path.
 
 Recipes
 -------

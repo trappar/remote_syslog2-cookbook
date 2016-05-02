@@ -1,6 +1,12 @@
 install = node['remote_syslog2']['install']
 bin_file = "#{install['bin_path']}/#{install['bin']}"
 
+install['old_bins'].each do |old_bin_file|
+  file "#{install['bin_path']}/#{old_bin_file}" do
+    action :delete
+  end
+end
+
 remote_file install['download_path'] do
   source install['download_file']
   mode '0644'

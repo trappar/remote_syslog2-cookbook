@@ -20,4 +20,5 @@ default['remote_syslog2']['install']['extract_path'] = '/tmp'
 default['remote_syslog2']['install']['extracted_path'] = '/tmp/remote_syslog'
 default['remote_syslog2']['install']['extracted_bin'] = 'remote_syslog'
 default['remote_syslog2']['install']['bin_path'] = '/usr/local/bin'
-default['remote_syslog2']['install']['bin'] = 'remote_syslog2'
+default['remote_syslog2']['install']['bin'] = 'remote_syslog2_0.17'
+default['remote_syslog2']['install']['old_bins'] = %w(remote_syslog2)

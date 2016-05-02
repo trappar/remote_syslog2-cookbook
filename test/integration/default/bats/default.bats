@@ -1,6 +1,5 @@
-@test "remote_syslog2 bin exists in path" {
-    which remote_syslog2
-    [ $? -eq 0 ]
+@test "exactly one remote_syslog2 bin exists in expected location" {
+    [ $(ls /usr/local/bin/remote_syslog2* | wc -l) -eq 1 ]
 }
 
 @test "remote_syslog2 config exists" {

@@ -17,3 +17,6 @@ gem 'stove'
 
 gem 'test-kitchen'
 gem 'kitchen-vagrant'
+
+gem 'chefspec'
+gem 'foodcritic'

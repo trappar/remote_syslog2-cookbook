@@ -17,7 +17,7 @@
 # chkconfig: 345 90 5
 # description: Runs remote_syslog2
 #
-# processname: remote_syslog2
+# processname: "<%= node['remote_syslog2']['install']['bin'] %>"
 
 prog="<%= node['remote_syslog2']['install']['bin'] %>"
 config="<%= node['remote_syslog2']['config_file'] %>"
@@ -41,8 +41,7 @@ start(){
     unset HOME MAIL USER USERNAME
     $prog -c $config --pid-file=$pid_file $EXTRAOPTIONS
     RETVAL=$?
-    echo
-    return $RETVAL
+    echo $RETVAL
 }
 
 stop(){
@@ -50,21 +49,18 @@ stop(){
     if (is_running); then
       kill `cat $pid_file`
       RETVAL=$?
-      echo
+      echo $RETVAL
       [ $RETVAL -eq 0 ] && [ -e "$pid_file" ] && rm -f $pid_file
-      return $RETVAL
     else
       echo "$pid_file not found"
     fi
 }
 
 status(){
-    echo -n $"Checking for $pid_file: "
-
     if (is_running); then
-      echo "found"
+      echo "remote_syslog2 start/running, process $(cat $pid_file)"
     else
-      echo "not found"
+      echo "remote_syslog2 stop/waiting"
     fi
 }
 

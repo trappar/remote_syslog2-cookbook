@@ -4,6 +4,7 @@ bin_file = "#{install['bin_path']}/#{install['bin']}"
 install['old_bins'].each do |old_bin_file|
   file "#{install['bin_path']}/#{old_bin_file}" do
     action :delete
+    backup false
     notifies :stop, 'service[remote_syslog2]', :immediately
   end
 end

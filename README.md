@@ -61,6 +61,10 @@ Usage
 -----
 Generally all you have to do to use this cookbook is add the default recipe to your run_list and configure the `node['remote_syslog2']['config']` hash.
 
+## Troubleshoot
+
+[Wiki](https://github.com/trappar/remote_syslog2-cookbook/wiki/troubleshoot)
+
 License and Authors
 -------------------
 Author:: Jeff Way (<jeff.way@me.com>)
